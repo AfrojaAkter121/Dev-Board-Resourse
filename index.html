@@ -18,9 +18,9 @@
 
     <title>Dev Board</title>
 </head>
-<body>
-    <header class="container mx-auto ">
-        <nav class="bg-white p-6 rounded-lg container flex justify-between mt-4">
+<body id="body">
+    <header class="container mx-auto my-auto">
+        <nav class="bg-white p-6 rounded-lg container flex justify-between">
            <div class="flex">
             <img class="w-10 h-10" src="assets/logo.png" alt="">
             <h1 class="text-2xl ml-2">Dev <span class="font-bold">Board</span></h1>
@@ -29,7 +29,7 @@
            <div class="flex mr-5">
                 <img class="w-5 h-5 mt-2" src="assets/checkbox.png" alt="">
                 <h1 id="task-plas" class="font-bold mt-1 ml-2 text-xl">23</h1>
-                <img class="w-8 h-8 mt-1 ml-7" src="assets/theme-btn.png" alt="">
+                <img id="theme" class="w-8 h-8 mt-1 ml-7" src="assets/theme-btn.png" alt="">
            </div>
         </nav>
     </header>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="flex justify-around w-80 h-20 btn bg-gradient-to-r from-[#576bea] to-[#8290f1]">
+                    <button id="page-btn" class="flex justify-around w-80 h-20 btn bg-gradient-to-r from-[#576bea] to-[#8290f1]">
                         <img class="h-14 w-12 border-dashed border-white" src="assets/board.png" alt="">
                         <p class="text-white text-lg text-left font-normal">Discover Something <br> New Today!</p>
                     </button></div>
@@ -59,10 +59,10 @@
             <!-- card div -->
             <div id="card-container" class="grid grid-cols-3 gap-x-5 space-y-20  mt-10 mb-8">
                 <!-- card 1 -->
-                 <div class="mt-16">
+                 <div class="mt-16 task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">ShopEase</p>
-                        <p class="text-xl font-bold mt-4">Fix Mobile Button Issue </p>
+                        <p class="text-xl font-bold mt-4 card-title">Fix Mobile Button Issue </p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -74,10 +74,10 @@
                     </div>
                  </div>
                  <!-- card 2 -->
-                 <div>
+                 <div class="task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">CloudSync</p>
-                        <p class="text-xl font-bold mt-4">Add Dark Mode </p>
+                        <p class="text-xl font-bold mt-4 card-title">Add Dark Mode </p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -89,10 +89,10 @@
                     </div>
                  </div>
                  <!-- card 3 -->
-                 <div>
+                 <div class="task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">SwiftPay</p>
-                        <p class="text-xl font-bold mt-4">Optimize  Home page  </p>
+                        <p class="text-xl font-bold mt-4 card-title">Optimize  Home page  </p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -104,10 +104,10 @@
                     </div>
                  </div>
                  <!-- card 4 -->
-                 <div>
+                 <div class="task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">Meta</p>
-                        <p class="text-xl font-bold mt-4">Add new emoji 🤲</p>
+                        <p class="text-xl font-bold mt-4 card-title">Add new emoji 🤲</p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -119,10 +119,10 @@
                     </div>
                  </div>
                  <!-- card 5 -->
-                 <div>
+                 <div class="task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">Google LLC</p>
-                        <p class="text-xl font-bold mt-4">Integrate OpenAI API </p>
+                        <p class="text-xl font-bold mt-4 card-title">Integrate OpenAI API </p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -134,10 +134,10 @@
                     </div>
                  </div>
                  <!-- card 6 -->
-                 <div>
+                 <div class="task">
                     <div>
                         <p class="text-base ml-5  text-gray-700">Glassdoar</p>
-                        <p class="text-xl font-bold mt-4">Improve Job searching  </p>
+                        <p class="text-xl font-bold mt-4 card-title">Improve Job searching  </p>
                         <p class="text-base ml-3 mt-4 text-gray-500"> Debug using Chrome DevTools, check for overlapping elements,</p>
                     </div>
                     <div class="flex mt-12 justify-between">
@@ -152,14 +152,18 @@
 
             
         </div>
-         <!-- time container -->
+         <!-- history container -->
          <div class="bg-white p-10 rounded-lg  ml-10 w-1/4">
             <div class="flex justify-center">
                 <img src="assets/activity.png" alt="">
                 <p class="ml-4">Activity Log</p>
             </div>
-            <button class=" btn flex justify-center mt-5 mx-auto h-10 bg-[#3752FD] border-none text-white">Clear History</button>
-      </div>
+            <button id="clear-btn" class=" btn flex justify-center mt-5 mx-auto h-10 bg-[#3752FD] border-none text-white">Clear History</button>
+
+            <div id="task-history" class="mt-7 p-4">
+                
+            </div>
+         </div>
        
        </section>
     </main>

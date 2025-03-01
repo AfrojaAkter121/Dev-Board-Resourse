@@ -31,18 +31,41 @@
 
      <main class="container mx-auto">
         <div class="ml-6">
-            <h1 class="text-2xl font-bold text-center">Blogs</h1>
-            <p class="text-xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</p>
-        <p></p>
-        <p class="text-xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
-        <p></p>
-        <p class="text-xl font-semibold">Question-3: What is event delegation in the DOM?</p>
-        <p></p>
-        <p class="text-xl font-semibold">Question-4: What is event bubbling in the DOM?</p>
-        <p></p>
-        <p class="text-xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
-        <p></p>
+            <h1 class="text-2xl font-bold text-center mb-5">Blogs</h1>
+            <div class="mb-5">
+                <p class="text-2xl font-semibold mt-3">Question-1: What are the different ways to select an element in the DOM?</p>
+                <p class="text-xl mt-4">Ans: There are several ways to select elements in the DOM. The most common methods include:</p>
+              <ol class="list-decimal ml-6">
+                  <li>getElementById(): Selects by ID.</li>
+                  <li>getElementsByClassName(): Selects by class name.</li>
+                  <li>getElementsByTagName(): Selects by tag name.</li>
+                  <li>querySelector(): Selects the first element matching a CSS selector.</li>
+                  <li>querySelectorAll(): Selects all elements matching a CSS selector.</li>
+                  <li>childNodes: Selects all child nodes of an element.</li>
+                  <li>parentNode: Selects the parent node of an element.</li>
+                  <li>closest(): Selects the closest ancestor that matches a selector.</li>
+              </ol>
+            </div>
+
+            <div>
+                <p class="text-xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+        <p class=" mt-4">Ans : innerHTML, innerText, and textContent are all used to get or set the content of an element in the DOM, </p>
+            <ul class="list-decimal ml-6" >
+                <li>innerHTML: Gets or sets HTML content, including tags.</li>
+                <li>innerText: Gets or sets visible text, considering styles and layout.</li>
+                <li>textContent: Gets or sets all text content, ignoring styles and layout.</li>
+            </ul>
+            </div>
+
+        <p class="text-xl font-semibold  mt-5">Question-3: What is event delegation in the DOM?</p>
+        <p class="ml-2 mt-2">Ans: Event delegation is a technique where you attach a single event listener to a parent element instead of each child element. The event bubbles up, and the parent handles it, making it efficient and useful for dynamic content.</p>
+        <p class="text-xl font-semibold mt-5">Question-4: What is event bubbling in the DOM?</p>
+        <p class="mt-2 ml-2">Ans : Event bubbling is when an event starts at the target element and bubbles up to its parent elements, allowing parent elements to handle events without needing separate listeners on each child.</p>
+        <p class="text-xl font-semibold mt-5">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+        <p class="mt-2 ml-2">Ans : To create an element, use document.createElement(tagName). To add it to the DOM, use appendChild(). To remove an element, use removeChild() or remove().</p>
         </div>
      </main>
+
+     <script src="script.js"></script>
 </body>
 </html>
