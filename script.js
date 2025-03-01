@@ -13,7 +13,7 @@ document.getElementById('date').textContent = date;
 const buttons = document.querySelectorAll(".card-btn");
 
 taskplusValue = 23;
-taskMinusValue = 5;
+taskMinusValue = 6;
 for(let button of buttons){
     button.addEventListener('click',function(){
         alert('board update succesfully');
@@ -35,7 +35,7 @@ for(let button of buttons){
 
         let time = new Date();
         let hours = time.getHours();
-        let nowHours = hours < 10 ? '0'+ hours : hours;
+        let nowHours = hours % 12 || 12;
         let minute = time.getMinutes();
         let nowMinute = minute < 10 ? '0' + minute : minute;
         let pmam = hours > 12 ? 'PM' : "AM" ;
@@ -81,5 +81,3 @@ document.getElementById('theme').addEventListener('click', function(){
 document.getElementById('page-btn').addEventListener('click', function(){
     window.location.href = 'question.html';
 })
-
-alert('hello')
