@@ -24,12 +24,21 @@ for(let button of buttons){
              document.getElementById('task-plas').textContent = taskplusValue;
             document.getElementById('task-minus').textContent = '0' + taskMinusValue;
 
+         
             button.disabled = true;
             button.style.background = 'gray'
-        }else{
-            alert('Congrat ! You Have Complete The Current Task');
-            button.disabled = true;
-            button.style.background = 'gray'
+        }
+        else if(taskMinusValue > 0){
+                alert('Congrat ! You Have Complete The Current Task');
+                taskplusValue += 1;
+                taskMinusValue -= 1;
+                document.getElementById('task-plas').textContent = taskplusValue;
+                document.getElementById('task-minus').textContent = '0' + taskMinusValue;
+                button.disabled = true;
+                button.style.background = 'gray'
+        }
+        else{
+            
         }
 
 
