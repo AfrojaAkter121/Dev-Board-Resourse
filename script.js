@@ -18,7 +18,7 @@ for(let button of buttons){
     button.addEventListener('click',function(){
         alert('board update succesfully');
 
-        if(taskMinusValue > 0){
+        if(taskMinusValue > 1){
             taskplusValue += 1;
             taskMinusValue -= 1;
              document.getElementById('task-plas').textContent = taskplusValue;
